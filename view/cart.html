@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.count{
+			font-size: 0.4rem !important;
+			color: rgb(100,100,100) !important;	
+		}
+		.count i,.count span{
+			font-size: 0.4rem !important;
+			color: rgb(100,100,100) !important;		
+		}
+		.count span:nth-child(2n){
+			display: inline-block;
+			width: 2.5rem;
+			border:1px solid grey;
+			border-radius: 0.1rem;
+			height: 0.6rem !important;
+			line-height: 0.6rem;
+			margin-top: 0.15rem;
+		}
+	</style>
+</head>
+<body ng-controller="cart">
+<nav><span></span><span class="carthead1">购物车</span></nav><div class="clear"></div>
+	<div class="maincontent cartcontent">
+		<div>
+			<!-- <div class="cartnav"><i class="iconfont selectfont" ng-click="unfished()">&#xe731;</i><span>全选</span><span ng-click="cartdele()">删除</span><div class="clear"></div></div> -->
+			<div class="cartselect">
+				<span ng-click="cartlist('unfinished')" ng-class="{'cartselect_span': unfinished}">未完成</span>
+				<span ng-click="cartlist('finished')" ng-class="{'cartselect_span': finished}">已完成</span>
+				<span ng-click="cartlist('expired')" ng-class="{'cartselect_span': expired}">已过期</span>
+			</div>
+			<div class="mainthigs cartmainthigs" ng-repeat="cartthing in cartthings">
+			    <hr/>
+				<div class="thisgsimg">
+					<img ng-src="{{cartthing.cartsource}}"><!-- images/shoppingmall.png -->
+				</div>
+				<div class="thingsdetail">
+					<p class="cartname">{{cartthing.cartthingsname}}</p>
+					<p>{{cartthing.cartintro}}</p>
+					<p><span class="price">￥<i class="price1">{{cartthing.thingsprice}}</i></span><span class="thingscount">x<i class="price2">{{cartthing.cartcount}}</i></span></p>
+				</div>
+				<p class="clear count"><span>共计：￥<i>{{cartthing.thingsprice * cartthing.cartcount}}</i></span><span ng-click="deleteorder(cartthing.cartthingsname,$event.target)">删除订单</span></p>
+				<div class="clear"></div>
+				<hr/>
+			</div>
+		</div>
+
+	   <!--  <p class="count"><span>￥<i id="count">0</i></span><span ng-click="submit()">结算<span></p> -->
+	</div>
+
+	<footer>
+		<p ng-click="homeCl()" ><a class="iconfont footicon" href="#/home">&#xe6cb;</a><br/><span class="footfont">首页</span></p>
+		<p ng-click="recommedCl()" ><a class="iconfont footicon" href="#/recommend">&#xe651;</a><br/><span class="footfont">推荐</span></p>
+		<p ng-click="cartCl()" class="cartsty"><a class="iconfont footicon" href="#/cart">&#xe64b;</a><br/><span class="footfont">订单</span></p>
+		<p ng-click="centerCl()" ><a class="iconfont footicon" href="#/myCenter">&#xe6b8;</a><br/><span class="footfont">我的</span></p>
+	</footer>
+</body>
+</html>

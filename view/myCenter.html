@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-controller="mycenterlist">
+<nav ><a ng-click="person()"><img ng-src="{{personlogo}}" class="photo"></a><span class="carthead">个人中心</span></nav><div class="clear"></div>
+	<div class="maincontent cartcontent">
+		<p class="perhead">
+			<span class="iconfont">&#xe6b8;</span>个人资料
+		</p>
+		<ul class="personlist">
+			<li ng-click="quithome()"><span>头像</span><i class="iconfont">&#xe6ba;</i><span class="right"><img ng-src="{{personlogo}}"></span></li>
+			<li class="clear"><span>昵称</span><i class="iconfont">&#xe6ba;</i><span class="right">{{personalname}}</span></li>
+			<li class="clear"><span>性别</span><i class="iconfont">&#xe6ba;</i><span class="right">{{sex}}</span></li>
+			<!-- <li class="clear"><span>二维码</span><i class="iconfont">&#xe6ba;</i></li> -->
+			<li class="clear"><a href="#/address" class="address" ng-click="address()"><span>收货地址</span><i class="iconfont">&#xe6ba;</i></a></li>
+			<li class="clear"><a class="address" ng-click="setupshop()"><span>我要开店</span><i class="iconfont">&#xe6ba;</i></a></li>
+			<li class="clear"><a href="tel:15733229661" class="address"><span>我要投诉</span><i class="iconfont">&#xe6ba;</i></a></li>
+			<li class="clear"><a class="address" href="#/guangsu"><span>联系我们</span><i class="iconfont">&#xe6ba;</i></a></li>
+		</ul>
+	</div>
+	<footer>
+		<p ng-click="homeCl()" ><a class="iconfont footicon" href="#/home">&#xe6cb;</a><br/><span class="footfont">首页</span></p>
+		<p ng-click="recommedCl()" ><a class="iconfont footicon" href="#/recommend">&#xe651;</a><br/><span class="footfont">推荐</span></p>
+		<p ng-click="cartCl()" ><a class="iconfont footicon" href="#/cart">&#xe64b;</a><br/><span class="footfont">订单</span></p>
+		<p ng-click="centerCl()" class="centersty"><a class="iconfont footicon" href="#/myCenter">&#xe6b8;</a><br/><span class="footfont">我的</span></p>
+	<!-- 	<div ng-if="quit" class="quit">
+		退出登录
+	</div>
+	<div ng-if="thingsdetail" class="thingsfoot">
+		<p ng-click="gobackshopping()"><a href="#/thingsdetail"><span class="iconfont">&#xe736;</span><span>店铺</span><a></p>
+		<p><span class="iconfont">&#xe63a;</span><span>收藏</span></p>
+		<p><span class="iconfont">&#xe608;</span><span>评价</span></p>
+		<p class="perget">到店自取</p>
+		<p class="sendhome">送货上门</p>
+	</div> -->
+	</footer>
+</body>
+</html>

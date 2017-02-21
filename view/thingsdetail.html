@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.video{
+		width: 10rem;
+		height: 5.7rem;
+	}
+	</style>
+</head>
+<body>
+<nav class="quithead"><span>星巴克</span></nav><div class="clear"></div><div class="clear"></div>
+	<div class="maincontent cartcontent" ng-controller="thingsdetail">
+
+		<!-- <video ng-src="videosource" controls autoplay loop>
+		 <source type="video/mp4" />
+		 Your browser does not support the video tag.
+		</video> -->
+
+		<div class="video" ng-bind-html="videosource">
+	
+	    </div> 
+		<p class="thingshr">{{shoppingintro}}</p>
+		<div>
+			<p class="storeaddress"><span>地址：</span>{{shoppingaddr}}</p>
+		    <a href="tel:{{phone}}" class="phone"></a>
+		</div>
+		<div class="clear"></div>
+		<div class="thingscontent">
+			<a class="everythings"  href="#/things" ng-click="thingshead(thingsdetail.thingsid)" ng-repeat="thingsdetail in thingsdetails">
+				<p>{{thingsdetail.intro}}</p>
+				<p>￥<i>{{thingsdetail.price}}</i></p>
+				<img ng-src="{{thingsdetail.thingpic}}">
+			</a>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<footer>
+		<p ng-click="homeCl()"><a class="iconfont footicon" href="#/home">&#xe6cb;</a><br/><span class="footfont">首页</span></p>
+		<p ng-click="recommedCl()" class="recommendsty"><a class="iconfont footicon" href="#/recommend">&#xe651;</a><br/><span class="footfont">推荐</span></p>
+		<p ng-click="cartCl()" ><a class="iconfont footicon" href="#/cart">&#xe64b;</a><br/><span class="footfont">订单</span></p>
+		<p ng-click="centerCl()" ><a class="iconfont footicon" href="#/myCenter">&#xe6b8;</a><br/><span class="footfont">我的</span></p>
+	</footer>
+</body>
+</html>

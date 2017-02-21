@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.scroll1{
+		position: absolute;
+		top:1.4rem;
+	}
+	.img_list1{
+		position: absolute;
+		z-index: 999999;
+		margin-top: -0.6rem;
+		right: 0.2rem;
+	}
+	.img_list1 li{
+		display: block;
+		float: left;
+		width: 0.2rem;
+		height: 0.2rem;
+		border-radius: 0.2rem;
+		background-color: #87CEFF;
+		margin:0 0.1rem 0 0.1rem;
+		cursor: pointer;
+		border:1px solid lightblue;
+	}
+	.listback{
+		background-color: #7FFF00 !important;
+	}
+	.num{
+		display:none;
+		position: absolute;
+		z-index: 9999;
+		height: 100%;
+		width: 100%;
+		top:0;
+		background-color: rgba(205,205,205,0.6);
+	}
+	.num form{
+		margin:0 auto;
+		width: 5rem;
+		margin-top: 4rem;
+		font-size: 0.4rem;
+		border:1px solid rgb(230,230,230);
+		border-radius: 0.2rem;
+		background-color: white;
+		text-align: center;
+	}
+	.selectnum{
+		background-image: url(images/get.png);
+		background-size: 100% 100%;
+		text-align: center;
+	}
+	.linehight{
+		height: 0.9rem;
+		line-height: 0.9rem;
+	}
+	.num input{
+		width: 2rem;
+		border:1px solid rgb(230,230,230);
+		font-size: 0.4rem !important;
+	}
+	.button{
+		background-image: url(images/count.png);
+		width: 1.2rem;
+		border-radius: 0.1rem;
+		background-size: 100% 100%;
+		font-size: 0.4rem !important;
+	}
+	.button1{
+		background-image: url(images/get.png);
+		width: 1.2rem;
+		margin-left: 1rem;
+		border-radius: 0.1rem;
+		background-size: 100% 100%;
+		font-size: 0.4rem !important;
+	}
+	#count{
+		font-size: 0.4rem !important;
+	}
+	.linehight select{
+		width: 2rem !important;
+		font-size: 0.4rem !important;
+	}
+	.linehight select option{
+		word-break : break-all;
+		font-size: 0.4rem !important;
+		width: 2rem;
+	}
+	</style>
+</head>
+<body ng-controller="things">
+<nav class="quithead"><span>{{storename}}</span></nav><div class="clear"></div><div class="clear"></div><!-- {{thingssource}} -->
+	<div class="maincontent cartcontent">
+		<div class="realthings">
+			<img ng-repeat="things in thingslist" ng-src="{{things}}" class="realthings scroll1">
+		</div>
+		<ul class="img_list1"><li ng-repeat="things in thingslist" data-list="{{things}}"></ul>
+	<div class="clear"></div>
+	    <input type="hidden" value="{{remains}}" id="remains"/>
+		<input style="display:none;" id="thingid"  value="{{thingsid}}">
+		<p class="thingsintro">{{thingsname}}</p>
+		<p class="price">￥<i>{{thingsprice}}</i></p>
+		<div class="thingsIntroDetail">
+			<ul>
+				<!-- <li class="iconfont">&#xe6c9;</li>
+				<li class="iconfont">&#xe6c9;</li>
+				<li class="iconfont">&#xe6c9;</li>
+				<li class="iconfont">&#xe6c9;</li>
+				<li class="iconfont">&#xe6f0;</li> -->
+				<!-- <li>{{star}}</li>
+				<li>颗星</li> -->
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="clear"></div>
+			<p class="express"><span><i></i></span><span>预约量：<i id="thingscount">{{num}}</i>笔</span></p>
+			<div class="clear"></div>
+			<p><span class="iconfont">&nbsp;</span></p>
+			<div class="clear"></div>
+			<div class="introduce" ng-bind-html="thingstext">
+				
+			</div>
+		</div>
+		
+	</div>
+	<footer>
+		<div class="thingsfoot">
+			<p ng-click="gobackshopping()"><a href="#/thingsdetail"><span class="iconfont">&#xe736;</span><span>店铺</span><a></p>
+			<p ><span class="iconfont"></span><span></span></p>
+			<p><span class="iconfont"></span><span></span></p>
+			<p></p>
+			<p class="sendhome" ng-click="order()" style="float:right">预约</p>
+		</div>
+	</footer>
+	<div class="num" id="num">
+		<form>
+		    <div class="selectnum linehight">请选择数量</div>
+			<p class="linehight">剩余量:<span>{{remains}}</span></p>
+			<div class="linehight">预定量：<input type="number" placeholder="1" id="count" value="1"/></div>
+			<div class="linehight">地&nbsp;&nbsp;&nbsp;&nbsp;址：<select id="peraddress"><option ng-repeat="addr in peraddress" value="{{addr.id}}">{{addr.address}}</option></select></div>
+			<div class="linehight"><button class="button" ng-click="submit()">确定</button><button class="button1" ng-click="cancel()">取消</button></div>
+		</form>
+	</div>
+</body>
+</html>

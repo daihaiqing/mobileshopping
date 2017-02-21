@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<nav><span>徐水<i class="iconfont barcode1">&#xe6b9;</i></span><input type="text" id="search"><a href="#/search" class="iconfont search"  ng-click="search()">&#xf00a8;</a><a href="#/barcode" class="iconfont barcode">&#xe6b0;</a></nav><div class="clear"></div>
+	<div class="maincontent">
+		<div class="shopping">
+			<a class="shopingSummary" href="#/thingsdetail" ng-repeat="recommendstore in recommendstores" ng-click="gotostore(recommendstore.id)">
+				<p class="head1">{{recommendstore.stroename}}</p>
+				<p>{{recommendstore.storeintro}}</p>
+				<div class="content">
+					<div class="left">
+						<img ng-src="{{recommendstore.storesurface}}">
+					</div>
+					<div class="right">
+						<img ng-src="{{recommendstore.srorelogo}}">
+						<p>{{recommendstore.stroename}}</p>
+						<p>{{recommendstore.distance}}</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</a>
+		</div>
+	</div>
+	<footer>
+		<p ng-click="homeCl()" ><a class="iconfont footicon" href="#/home">&#xe6cb;</a><br/><span class="footfont">首页</span></p>
+		<p ng-click="recommedCl()" class="recommendsty"><a class="iconfont footicon" href="#/recommend">&#xe651;</a><br/><span class="footfont">推荐</span></p>
+		<p ng-click="cartCl()" ><a class="iconfont footicon" href="#/cart">&#xe64b;</a><br/><span class="footfont">订单</span></p>
+		<p ng-click="centerCl()" ><a class="iconfont footicon"  href="#/myCenter">&#xe6b8;</a><br/><span class="footfont">我的</span></p>
+		<!-- <div ng-if="quit" class="quit">
+			退出登录
+		</div>
+		<div ng-if="thingsdetail" class="thingsfoot">
+			<p ng-click="gobackshopping()"><a href="#/thingsdetail"><span class="iconfont">&#xe736;</span><span>店铺</span><a></p>
+			<p><span class="iconfont">&#xe63a;</span><span>收藏</span></p>
+			<p><span class="iconfont">&#xe608;</span><span>评价</span></p>
+			<p class="perget">到店自取</p>
+			<p class="sendhome">送货上门</p>
+		</div> -->
+	</footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-controller="barcode">
+<nav ><span>徐水<i class="iconfont barcode1">&#xe6b9;</i></span><input type="text" ><a href="#/search" class="iconfont search"  ng-click="search()">&#xf00a8;</a><a href="#/barcode" class="iconfont barcode">&#xe6b0;</a></nav><div class="clear"></div>
+
+	<div class="maincontent" ng-controller="barcode">
+		<img src="images/code.png" class="code">
+	</div>
+	<footer>
+		<p ng-click="homeCl()" class="overviewsty"><a class="iconfont footicon" href="#/home">&#xe6cb;</a><br/><span class="footfont">首页</span></p>
+		<p ng-click="recommedCl()" ><a class="iconfont footicon" href="#/recommend">&#xe651;</a><br/><span class="footfont">推荐</span></p>
+		<p ng-click="cartCl()" ><a class="iconfont footicon" href="#/cart">&#xe64b;</a><br/><span class="footfont">订单</span></p>
+		<p ng-click="centerCl()" ><a class="iconfont footicon" href="#/myCenter">&#xe6b8;</a><br/><span class="footfont">我的</span></p>
+	</footer>
+</body>
+</html>

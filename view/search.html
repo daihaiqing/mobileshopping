@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<nav><span>徐水<i class="iconfont barcode1">&#xe6b9;</i></span><input type="text" id="search" ><a href="#/search" class="iconfont search"  ng-click="search()">&#xf00a8;</a><a href="#/barcode" class="iconfont barcode">&#xe6b0;</a></nav><div class="clear"></div>
+	<div class="maincontent" ng-controller="search">
+		<div class="shopping">
+			<a class="shopingSummary" href="#/thingsdetail" ng-repeat="search in searchs" ng-click="gotostore(search.id)">
+				<p class="head1">{{search.stroename}}</p>
+				<p>{{search.storeintro}}</p>
+				<div class="content">
+					<div class="left">
+						<img ng-src="{{search.storesurface}}">
+					</div>
+					<div class="right">
+						<img ng-src="{{search.srorelogo}}">
+						<p>{{search.stroename}}</p>
+						<p>{{search.distance}}</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</a>
+		</div>
+	</div>
+	<footer>
+		<p ng-click="homeCl()"><a class="iconfont footicon" href="#/home">&#xe6cb;</a><br/><span class="footfont">首页</span></p>
+		<p ng-click="recommedCl()" class="recommendsty"><a class="iconfont footicon" href="#/recommend">&#xe651;</a><br/><span class="footfont">推荐</span></p>
+		<p ng-click="cartCl()"><a class="iconfont footicon" href="#/cart">&#xe64b;</a><br/><span class="footfont">订单</span></p>
+		<p ng-click="centerCl()" ><a class="iconfont footicon" href="#/myCenter">&#xe6b8;</a><br/><span class="footfont">我的</span></p>
+	</footer>
+</body>
+</html>

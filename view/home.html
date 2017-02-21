@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.scroll{
+		position: absolute;
+	}
+	.hideme{
+		opacity: 0;
+	}
+	.showme{
+		opacity: 1;
+	}
+	.img_list{
+		position: absolute;
+		z-index: 999999;
+		margin-top:1.1rem;
+		right: 0.2rem;
+	}
+	.img_list li{
+		display: block;
+		float: left;
+		width: 0.2rem;
+		height: 0.2rem;
+		border-radius: 0.2rem;
+		background-color: #87CEFF;
+		margin:0 0.1rem 0 0.1rem;
+		cursor: pointer;
+		border:1px solid lightblue;
+	}
+	.listback{
+		background-color: #7FFF00 !important;
+	}
+	</style>
+</head>
+<body ng-controller="home">
+<nav ><span>徐水<i class="iconfont barcode1">&#xe6b9;</i></span><input type="text" id="search"><a href="#/search" ng-click="search()" class="iconfont search">&#xf00a8;</a><a href="#/barcode" class="iconfont barcode">&#xe6b0;</a></nav><div class="clear"></div>
+	<div class="header">
+		<img ng-repeat="img in homelist" ng-src="{{img}}" class="scroll">
+	</div>
+	<ul class="img_list"><li ng-repeat="img in homelist" data-list="img"></li></ul>
+	<div class="clear"></div>
+	<div class="dist">
+		<ul>
+			<li><a  href="#/recommend" ng-click="distiguish('cloth')"><i class="iconfont disticon">&#xe655;</i><br/><span class="ditfont">衣帽</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('decortion')"><i class="iconfont disticon">&#xe67f;</i><br/><span class="ditfont">首饰</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('electrical' )"><i class="iconfont disticon">&#xe6da;</i><br/><span class="ditfont">家电</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('ticket')"><i class="iconfont disticon">&#xe647;</i><br/><span class="ditfont">门票</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('plant')"><i class="iconfont disticon">&#xf00ac;</i><br/><span class="ditfont">植物</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('building' )"><i class="iconfont disticon">&#xe738;</i><br/><span class="ditfont">建材</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('hours')"><i class="iconfont disticon">&#xe74f;</i><br/><span class="ditfont">24小时</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('digit')"><i class="iconfont disticon">&#xe692;</i><br/><span class="ditfont">数码</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('shoes')"><i class="iconfont disticon">&#x3463;</i><br/><span class="ditfont">鞋包</span></a></li>
+			<li><a  href="#/recommend" ng-click="distiguish('shopping')"><i class="iconfont disticon">&#xe6e2;</i><br/><span class="ditfont">超市</span></a></li>
+		</ul>
+	</div>
+	<hr />
+	<div class="shopping">
+		<a class="shopingSummary" href="#/thingsdetail" ng-repeat="homeshopping in homeshoppings" ng-click="gotostore(homeshopping.id)">
+			<p class="head1">{{homeshopping.stroename}}</p>
+			<p>{{homeshopping.storeintro}}</p>
+			<div class="content">
+				<div class="left">
+					<img ng-src="{{homeshopping.storesurface}}">
+				</div>
+				<div class="right">
+					<img ng-src="{{homeshopping.srorelogo}}">
+					<p>{{homeshopping.stroename}}</p>
+					<p>{{homeshopping.distance}}</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</a>
+	
+	</div>
+	<div class="clear"></div>
+	<footer>
+		<p ng-click="homeCl()" class="overviewsty"><a class="iconfont footicon" href="#/home">&#xe6cb;</a><br/><span class="footfont">首页</span></p>
+		<p ng-click="recommedCl()" ><a class="iconfont footicon" href="#/recommend">&#xe651;</a><br/><span class="footfont">推荐</span></p>
+		<p ng-click="cartCl()" ><a class="iconfont footicon" href="#/cart">&#xe64b;</a><br/><span class="footfont">订单</span></p>
+		<p ng-click="centerCl()" ><a class="iconfont footicon" href="#/myCenter">&#xe6b8;</a><br/><span class="footfont">我的</span></p>
+	</footer>
+</body>
+</html>

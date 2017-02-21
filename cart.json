@@ -1,0 +1,10 @@
+﻿{
+	"cartthings":[
+		{"thingsid":123,"cartsource":"images/shoppingmall.png","cartthingsname":"1","cartintro":"似的发射点似的发射点士大夫","thingsprice":1234,"cartcount":12},
+		{"thingsid":123,"cartsource":"images/shoppingmall.png","cartthingsname":"2","cartintro":"似的发射点似的发射点士大夫","thingsprice":1234,"cartcount":12},
+		{"thingsid":123,"cartsource":"images/shoppingmall.png","cartthingsname":"3","cartintro":"似的发射点似的发射点士大夫","thingsprice":1234,"cartcount":12},
+		{"thingsid":123,"cartsource":"images/shoppingmall.png","cartthingsname":"4","cartintro":"似的发射点似的发射点士大夫","thingsprice":1234,"cartcount":12},
+		{"thingsid":123,"cartsource":"images/shoppingmall.png","cartthingsname":"5","cartintro":"似的发射点似的发射点士大夫","thingsprice":1234,"cartcount":12},
+		{"thingsid":123,"cartsource":"images/shoppingmall.png","cartthingsname":"6","cartintro":"似的发射点似的发射点士大夫","thingsprice":1234,"cartcount":12}
+	]
+}

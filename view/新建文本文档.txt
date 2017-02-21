@@ -1,0 +1,2 @@
+1、所有页面删除属性href="#/myCenter"属性！
+2、cart.html

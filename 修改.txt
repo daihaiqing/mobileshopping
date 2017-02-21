@@ -1,0 +1,12 @@
+改：
+home.html
+things.html
+index.html
+things.json
+home.json
+main.js  123行加$scope.thingslist=data.thingslist;
+         124行加$scope.remains=data.remains;
+         148行加$scope.homelist=data.homelist;
+         .controller('things',function($scope,$http,$sce)下的函数
+加：
+jquery-2.1.3.js

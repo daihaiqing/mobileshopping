@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-controller="address">
+<nav class="quithead"><a class="iconfont goback" href="#/myCenter">&#xe779;</a><span>设置</span></nav><div class="clear"></div>
+	<div class="maincontent cartcontent">
+		<p class="perhead">
+			<span class="iconfont">&#xe6b8;</span>收货地址
+		</p>
+		<p class="myaddress" ng-repeat="add in adds" ng-click="deleteadd($index)">{{$index+1}}、地址：{{add.address}}。电话：{{add.phone}}</p>
+		<p class="addAddr addrP">电话：<input type="tel" id="addrP" /></p>
+		<div class="addAddr">
+			地址：<textarea id="submitadd"></textarea>
+		</div>
+	</div>
+	<footer>
+		<div class="quit" ng-click="addsure()">
+			确定添加
+		</div>
+	</footer>
+</body>
+</html>

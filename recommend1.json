@@ -1,0 +1,12 @@
+﻿{
+	"recommendstores":[
+		{"id":123,"stroename":"dis","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"},
+		{"id":123,"stroename":"星巴克","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"},
+		{"id":123,"stroename":"星巴克","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"},
+		{"id":123,"stroename":"星巴克","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"},
+		{"id":123,"stroename":"星巴克","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"},
+		{"id":123,"stroename":"星巴克","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"},
+		{"id":123,"stroename":"星巴克","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"},
+		{"id":123,"stroename":"星巴克","storeintro":"星冰粽一方小桌，一抹新绿，一口温馨回忆","storesurface":"images/shoppingmall.png","srorelogo":"images/shoplogo.png","distance":"1.9km"}
+	]
+}

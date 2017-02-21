@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-controller="evaluatedetail">
+<nav class="quithead"><span>{{storename}}</span></nav><div class="clear"></div><div class="clear"></div>
+	<div class="maincontent cartcontent" ng-controller="evaluatedetail">
+
+		<img ng-src="{{thingssource}}" class="realthings">
+		<p class="thingsintro">{{thingsname}}</p>
+		<p class="price">￥<i>{{thingsprice}}</i></p>
+		<div class="thingsIntroDetail">
+			<div class="clear"></div>
+			<p class="express"><span>快递：￥<i>{{expressprice}}</i></span><span>月销量：<i>{{num}}</i>笔</span></p>
+			<div class="clear"></div>
+		</div>
+		<ul class="star">
+			<li class="iconfont starli" ng-click="star(1)">&#xe6c9;</li>
+			<li class="iconfont starli" ng-click="star(2)">&#xe6c9;</li>
+			<li class="iconfont starli" ng-click="star(3)">&#xe6c9;</li>
+			<li class="iconfont starli" ng-click="star(4)">&#xe6c9;</li>
+			<li class="iconfont starli" ng-click="star(5)">&#xe6c9;</li>
+		</ul>
+		<div class="clear"></div>
+		<textarea class="evatext" ng-model="textdeta"></textarea>
+		
+	</div>
+	<footer>
+		<div class="quit" ng-click="send()">
+		    提交
+	    </div>
+	</footer>
+</body>
+</html>
